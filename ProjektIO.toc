@@ -1,0 +1,19 @@
+\contentsline {section}{\numberline {1}Streszczenie}{2}
+\contentsline {section}{\numberline {2}Lista obiekt\IeC {\'o}w}{2}
+\contentsline {section}{\numberline {3}Lista bod\IeC {\'z}c\IeC {\'o}w}{2}
+\contentsline {section}{\numberline {4}Diagram kontekstowy}{3}
+\contentsline {section}{\numberline {5}DFD poziom 0}{4}
+\contentsline {section}{\numberline {6}DFD poziom 1 - Os\IeC {\l }uga zlece\IeC {\'n}}{5}
+\contentsline {section}{\numberline {7}DFD poziom 1 - Lokalizowanie}{6}
+\contentsline {section}{\numberline {8}DFD poziom 1 - Wyznaczanie przebytej trasy}{7}
+\contentsline {section}{\numberline {9}DFD poziom 1 - Obs\IeC {\l }uga zmiany po\IeC {\l }o\IeC {\.z}enia}{8}
+\contentsline {section}{\numberline {10}DFD poziom 2 }{9}
+\contentsline {section}{\numberline {11}DFD poziom 2}{10}
+\contentsline {section}{\numberline {12}DFD poziom 2}{11}
+\contentsline {section}{\numberline {13}DFD poziom 2}{12}
+\contentsline {section}{\numberline {14}DFD poziom 2}{13}
+\contentsline {section}{\numberline {15}DFD poziom 2}{14}
+\contentsline {section}{\numberline {16}DFD poziom 2}{15}
+\contentsline {section}{\numberline {17}DFD poziom 2}{16}
+\contentsline {section}{\numberline {18}DFD poziom 2}{17}
+\contentsline {section}{\numberline {19}DFD poziom 2}{18}
