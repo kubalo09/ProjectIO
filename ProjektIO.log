@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.8)  10 DEC 2017 19:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.8)  12 DEC 2017 14:01
 entering extended mode
 **./ProjektIO.tex
 (ProjektIO.tex
@@ -662,171 +662,250 @@ Overfull \hbox (8.03062pt too wide) in paragraph at lines 154--155
  [] 
  []
 
-[4 <./DFD0.pdf>] <DFD1.pdf, id=29, 597.23125pt x 845.1575pt>
+[4 <./DFD0.pdf>]
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 158.
+ <DFD1.pdf, id=29, 723.70375pt x 584.1825pt>
 File: DFD1.pdf Graphic file (type pdf)
  <use DFD1.pdf>
-Package pdftex.def Info: DFD1.pdf used on input line 159.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+Package pdftex.def Info: DFD1.pdf used on input line 160.
+(pdftex.def)             Requested size: 506.58917pt x 408.92496pt.
 
-Overfull \hbox (8.03062pt too wide) in paragraph at lines 159--160
+Overfull \hbox (36.83415pt too wide) in paragraph at lines 160--161
  [] 
  []
 
-[5 <./DFD1.pdf>] <DFD2.pdf, id=36, 597.23125pt x 845.1575pt>
+<DFD2.pdf, id=30, 821.0675pt x 551.05875pt>
 File: DFD2.pdf Graphic file (type pdf)
  <use DFD2.pdf>
 Package pdftex.def Info: DFD2.pdf used on input line 164.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+(pdftex.def)             Requested size: 492.6443pt x 330.63779pt.
 
-Overfull \hbox (8.03062pt too wide) in paragraph at lines 164--165
+Overfull \hbox (22.88928pt too wide) in paragraph at lines 164--165
  [] 
  []
 
-[6 <./DFD2.pdf>] <DFD3.pdf, id=44, 597.23125pt x 845.1575pt>
+[5 <./DFD1.pdf> <./DFD2.pdf>] <DFD3.pdf, id=40, 740.7675pt x 623.32875pt>
 File: DFD3.pdf Graphic file (type pdf)
- <use DFD3.pdf>
+
+<use DFD3.pdf>
 Package pdftex.def Info: DFD3.pdf used on input line 169.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-
-Overfull \hbox (8.03062pt too wide) in paragraph at lines 169--170
- [] 
- []
-
-[7 <./DFD3.pdf>] <DFD4.pdf, id=51, 597.23125pt x 845.1575pt>
+(pdftex.def)             Requested size: 444.46393pt x 374.00014pt.
+ <DFD4.pdf, id=41, 683.55376pt x 578.16pt>
 File: DFD4.pdf Graphic file (type pdf)
  <use DFD4.pdf>
-Package pdftex.def Info: DFD4.pdf used on input line 174.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+Package pdftex.def Info: DFD4.pdf used on input line 173.
+(pdftex.def)             Requested size: 410.13542pt x 346.89867pt.
 
-Overfull \hbox (8.03062pt too wide) in paragraph at lines 174--175
- [] 
- []
-
-[8 <./DFD4.pdf>] <DFD11.pdf, id=58, 597.23125pt x 845.1575pt>
+[6 <./DFD3.pdf> <./DFD4.pdf>] <DFD11.pdf, id=52, 773.89125pt x 584.1825pt>
 File: DFD11.pdf Graphic file (type pdf)
- <use DFD11.pdf>
+
+<use DFD11.pdf>
 Package pdftex.def Info: DFD11.pdf used on input line 179.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-
-Overfull \hbox (8.03062pt too wide) in paragraph at lines 179--180
- [] 
- []
-
-[9 <./DFD11.pdf>] <DFD12.pdf, id=65, 597.23125pt x 845.1575pt>
+(pdftex.def)             Requested size: 464.33833pt x 350.51219pt.
+ <DFD12.pdf, id=53, 643.40375pt x 584.1825pt>
 File: DFD12.pdf Graphic file (type pdf)
  <use DFD12.pdf>
-Package pdftex.def Info: DFD12.pdf used on input line 184.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+Package pdftex.def Info: DFD12.pdf used on input line 183.
+(pdftex.def)             Requested size: 450.37955pt x 408.92496pt.
 
-Overfull \hbox (8.03062pt too wide) in paragraph at lines 184--185
- [] 
- []
-
-[10 <./DFD12.pdf>] <DFD21.pdf, id=72, 597.23125pt x 845.1575pt>
+[7 <./DFD11.pdf> <./DFD12.pdf>] <DFD21.pdf, id=63, 783.92876pt x 563.10374pt>
 File: DFD21.pdf Graphic file (type pdf)
 
 <use DFD21.pdf>
-Package pdftex.def Info: DFD21.pdf used on input line 189.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+Package pdftex.def Info: DFD21.pdf used on input line 188.
+(pdftex.def)             Requested size: 470.36089pt x 337.86485pt.
 
-Overfull \hbox (8.03062pt too wide) in paragraph at lines 189--190
+Overfull \hbox (0.60587pt too wide) in paragraph at lines 188--189
  [] 
  []
 
-[11 <./DFD21.pdf>] <DFD22.pdf, id=79, 597.23125pt x 845.1575pt>
+<DFD22.pdf, id=64, 799.98875pt x 495.8525pt>
 File: DFD22.pdf Graphic file (type pdf)
+ <use DFD22.pdf>
+Package pdftex.def Info: DFD22.pdf used on input line 192.
+(pdftex.def)             Requested size: 479.99695pt x 297.5138pt.
 
-<use DFD22.pdf>
-Package pdftex.def Info: DFD22.pdf used on input line 194.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-
-Overfull \hbox (8.03062pt too wide) in paragraph at lines 194--195
+Overfull \hbox (10.24193pt too wide) in paragraph at lines 192--193
  [] 
  []
 
-[12 <./DFD22.pdf>] <DFD23.pdf, id=87, 597.23125pt x 845.1575pt>
+[8 <./DFD21.pdf> <./DFD22.pdf>] <DFD23.pdf, id=74, 810.02625pt x 353.32pt>
 File: DFD23.pdf Graphic file (type pdf)
 
 <use DFD23.pdf>
-Package pdftex.def Info: DFD23.pdf used on input line 199.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
+Package pdftex.def Info: DFD23.pdf used on input line 197.
+(pdftex.def)             Requested size: 526.51082pt x 229.65527pt.
 
-Overfull \hbox (8.03062pt too wide) in paragraph at lines 199--200
+Overfull \hbox (56.7558pt too wide) in paragraph at lines 197--198
  [] 
  []
 
-[13 <./DFD23.pdf>] <DFD31.pdf, id=94, 597.23125pt x 845.1575pt>
+<DFD31.pdf, id=75, 693.59125pt x 609.27625pt>
 File: DFD31.pdf Graphic file (type pdf)
-
-<use DFD31.pdf>
-Package pdftex.def Info: DFD31.pdf used on input line 204.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-
-Overfull \hbox (8.03062pt too wide) in paragraph at lines 204--205
- [] 
- []
-
-[14 <./DFD31.pdf>] <DFD32.pdf, id=101, 597.23125pt x 845.1575pt>
+ <use DFD31.pdf>
+Package pdftex.def Info: DFD31.pdf used on input line 201.
+(pdftex.def)             Requested size: 450.82896pt x 396.02486pt.
+ [9 <./DFD23.pdf> <./DFD31.pdf>] <DFD32.pdf, id=85, 799.98875pt x 674.52pt>
 File: DFD32.pdf Graphic file (type pdf)
+ <use DFD32.pdf>
+Package pdftex.def Info: DFD32.pdf used on input line 206.
+(pdftex.def)             Requested size: 519.98653pt x 438.4328pt.
 
-<use DFD32.pdf>
-Package pdftex.def Info: DFD32.pdf used on input line 209.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-
-Overfull \hbox (8.03062pt too wide) in paragraph at lines 209--210
+Overfull \hbox (50.2315pt too wide) in paragraph at lines 206--207
  [] 
  []
 
-[15 <./DFD32.pdf>] <DFD33.pdf, id=108, 597.23125pt x 845.1575pt>
+<DFD33.pdf, id=86, 633.36626pt x 531.9875pt>
 File: DFD33.pdf Graphic file (type pdf)
-
-<use DFD33.pdf>
-Package pdftex.def Info: DFD33.pdf used on input line 214.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-
-Overfull \hbox (8.03062pt too wide) in paragraph at lines 214--215
- [] 
- []
-
-[16 <./DFD33.pdf>] <DFD41.pdf, id=115, 597.23125pt x 845.1575pt>
+ <use DFD33.pdf>
+Package pdftex.def Info: DFD33.pdf used on input line 210.
+(pdftex.def)             Requested size: 380.02269pt x 319.19496pt.
+ [10 <./DFD32.pdf> <./DFD33.pdf>] <DFD41.pdf, id=96, 683.55376pt x 578.16pt>
 File: DFD41.pdf Graphic file (type pdf)
+ <use DFD41.pdf>
+Package pdftex.def Info: DFD41.pdf used on input line 215.
+(pdftex.def)             Requested size: 410.13542pt x 346.89867pt.
 
-<use DFD41.pdf>
-Package pdftex.def Info: DFD41.pdf used on input line 219.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-
-Overfull \hbox (8.03062pt too wide) in paragraph at lines 219--220
- [] 
- []
-
-[17 <./DFD41.pdf>] <DFD42.pdf, id=122, 597.23125pt x 845.1575pt>
+<DFD42.pdf, id=97, 804.00375pt x 754.82pt>
 File: DFD42.pdf Graphic file (type pdf)
+ <use DFD42.pdf>
+Package pdftex.def Info: DFD42.pdf used on input line 219.
+(pdftex.def)             Requested size: 442.20343pt x 415.1523pt.
+ [11 <./DFD41.pdf> <./DFD42.pdf>] <ERD.pdf, id=107, 814.04124pt x 773.89125pt>
+File: ERD.pdf Graphic file (type pdf)
+ <use ERD.pdf>
+Package pdftex.def Info: ERD.pdf used on input line 224.
+(pdftex.def)             Requested size: 529.12053pt x 503.02335pt.
 
-<use DFD42.pdf>
-Package pdftex.def Info: DFD42.pdf used on input line 224.
-(pdftex.def)             Requested size: 477.78564pt x 676.12692pt.
-
-Overfull \hbox (8.03062pt too wide) in paragraph at lines 224--225
+Overfull \hbox (59.36551pt too wide) in paragraph at lines 224--225
  [] 
  []
 
-[18 <./DFD42.pdf>] (ProjektIO.aux) ) 
+[12 <./ERD.pdf>] <punktyDostepu.PNG, id=115, 284.262pt x 94.55325pt>
+File: punktyDostepu.PNG Graphic file (type png)
+
+<use punktyDostepu.PNG>
+Package pdftex.def Info: punktyDostepu.PNG used on input line 230.
+(pdftex.def)             Requested size: 284.26129pt x 94.55301pt.
+ <Lokalizacja.PNG, id=116, 282.45525pt x 78.2925pt>
+File: Lokalizacja.PNG Graphic file (type png)
+
+<use Lokalizacja.PNG>
+Package pdftex.def Info: Lokalizacja.PNG used on input line 234.
+(pdftex.def)             Requested size: 282.45454pt x 78.2923pt.
+ <Odcinek.PNG, id=117, 280.04625pt x 107.80275pt>
+File: Odcinek.PNG Graphic file (type png)
+
+<use Odcinek.PNG>
+Package pdftex.def Info: Odcinek.PNG used on input line 238.
+(pdftex.def)             Requested size: 280.04555pt x 107.80247pt.
+ <Trasa.PNG, id=118, 281.25075pt x 60.82726pt>
+File: Trasa.PNG Graphic file (type png)
+
+<use Trasa.PNG>
+Package pdftex.def Info: Trasa.PNG used on input line 242.
+(pdftex.def)             Requested size: 281.25005pt x 60.8271pt.
+ <daneAplikacji.PNG, id=119, 282.45525pt x 92.7465pt>
+File: daneAplikacji.PNG Graphic file (type png)
+
+<use daneAplikacji.PNG>
+Package pdftex.def Info: daneAplikacji.PNG used on input line 246.
+(pdftex.def)             Requested size: 282.45454pt x 92.74628pt.
+ <zlecenia.PNG, id=120, 281.853pt x 75.28125pt>
+File: zlecenia.PNG Graphic file (type png)
+
+<use zlecenia.PNG>
+Package pdftex.def Info: zlecenia.PNG used on input line 250.
+(pdftex.def)             Requested size: 281.85231pt x 75.28105pt.
+ <daneAkcelerometr.PNG, id=121, 257.16075pt x 92.14426pt>
+File: daneAkcelerometr.PNG Graphic file (type png)
+
+<use daneAkcelerometr.PNG>
+Package pdftex.def Info: daneAkcelerometr.PNG used on input line 254.
+(pdftex.def)             Requested size: 257.16011pt x 92.14401pt.
+ [13 <./punktyDostepu.PNG> <./Lokalizacja.PNG> <./Odcinek.PNG> <./Trasa.PNG> <.
+/daneAplikacji.PNG> <./zlecenia.PNG>]
+<daneMagnetometr.PNG, id=131, 272.217pt x 78.89474pt>
+File: daneMagnetometr.PNG Graphic file (type png)
+
+<use daneMagnetometr.PNG>
+Package pdftex.def Info: daneMagnetometr.PNG used on input line 258.
+(pdftex.def)             Requested size: 272.21631pt x 78.89453pt.
+ <daneBarometr.PNG, id=132, 257.16075pt x 77.088pt>
+File: daneBarometr.PNG Graphic file (type png)
+
+<use daneBarometr.PNG>
+Package pdftex.def Info: daneBarometr.PNG used on input line 262.
+(pdftex.def)             Requested size: 257.16011pt x 77.0878pt.
+ <zmianaBarometr.PNG, id=133, 256.5585pt x 78.89474pt>
+File: zmianaBarometr.PNG Graphic file (type png)
+
+<use zmianaBarometr.PNG>
+Package pdftex.def Info: zmianaBarometr.PNG used on input line 266.
+(pdftex.def)             Requested size: 256.55788pt x 78.89453pt.
+ <zmianaDanych.PNG, id=134, 271.0125pt x 93.34875pt>
+File: zmianaDanych.PNG Graphic file (type png)
+
+<use zmianaDanych.PNG>
+Package pdftex.def Info: zmianaDanych.PNG used on input line 270.
+(pdftex.def)             Requested size: 271.01183pt x 93.34851pt.
+ [14 <./daneAkcelerometr.PNG> <./daneMagnetometr.PNG> <./daneBarometr.PNG> <./z
+mianaBarometr.PNG> <./zmianaDanych.PNG>]
+<STD0.pdf, id=143, 553.06625pt x 825.0825pt>
+File: STD0.pdf Graphic file (type pdf)
+ <use STD0.pdf>
+Package pdftex.def Info: STD0.pdf used on input line 276.
+(pdftex.def)             Requested size: 497.75502pt x 742.5674pt.
+
+Overfull \hbox (28.0pt too wide) in paragraph at lines 276--277
+ [] 
+ []
+
+[15 <./STD0.pdf>] <STD1.pdf, id=150, 455.7025pt x 915.42pt>
+File: STD1.pdf Graphic file (type pdf)
+ <use STD1.pdf>
+Package pdftex.def Info: STD1.pdf used on input line 281.
+(pdftex.def)             Requested size: 410.12845pt x 823.87039pt.
+
+[16 <./STD1.pdf>] <STD2.pdf, id=157, 417.56pt x 920.43875pt>
+File: STD2.pdf Graphic file (type pdf)
+ <use STD2.pdf>
+Package pdftex.def Info: STD2.pdf used on input line 286.
+(pdftex.def)             Requested size: 375.8005pt x 828.38724pt.
+
+[17 <./STD2.pdf>] <STD3.pdf, id=164, 402.50375pt x 694.595pt>
+File: STD3.pdf Graphic file (type pdf)
+ <use STD3.pdf>
+Package pdftex.def Info: STD3.pdf used on input line 291.
+(pdftex.def)             Requested size: 382.37639pt x 659.86151pt.
+
+[18 <./STD3.pdf>] <STD4.pdf, id=172, 425.59pt x 1146.2825pt>
+File: STD4.pdf Graphic file (type pdf)
+ <use STD4.pdf>
+Package pdftex.def Info: STD4.pdf used on input line 296.
+(pdftex.def)             Requested size: 319.1917pt x 859.70978pt.
+
+Overfull \vbox (15.24489pt too high) has occurred while \output is active []
+
+
+[19 <./STD4.pdf>] (ProjektIO.aux) ) 
 Here is how much of TeX's memory you used:
- 4171 strings out of 493334
- 57512 string characters out of 3139246
- 148250 words of memory out of 3000000
- 7592 multiletter control sequences out of 15000+200000
- 31285 words of font info for 55 fonts, out of 3000000 for 9000
+ 4260 strings out of 493334
+ 58957 string characters out of 3139246
+ 149250 words of memory out of 3000000
+ 7662 multiletter control sequences out of 15000+200000
+ 32734 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,10n,43p,798b,253s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvip
-s/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ProjektIO.pdf (19 pages, 2064975 bytes).
+ 49i,10n,43p,798b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips
+/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on ProjektIO.pdf (20 pages, 2745293 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
+ 194 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
