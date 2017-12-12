@@ -3,22 +3,22 @@
 \contentsline {section}{\numberline {3}Lista bod\IeC {\'z}c\IeC {\'o}w}{2}
 \contentsline {section}{\numberline {4}Diagram kontekstowy}{3}
 \contentsline {section}{\numberline {5}DFD poziom 0}{4}
-\contentsline {section}{\numberline {6}DFD poziom 1}{5}
-\contentsline {subsection}{\numberline {6.1}DFD poziom 1 - Os\IeC {\l }uga zlece\IeC {\'n}}{5}
-\contentsline {subsection}{\numberline {6.2}DFD poziom 1 - Lokalizowanie}{5}
-\contentsline {subsection}{\numberline {6.3}DFD poziom 1 - Wyznaczanie przebytej trasy}{6}
-\contentsline {subsection}{\numberline {6.4}DFD poziom 1 - Obs\IeC {\l }uga zmiany po\IeC {\l }o\IeC {\.z}enia}{6}
-\contentsline {section}{\numberline {7}DFD poziom 2}{7}
-\contentsline {subsection}{\numberline {7.1}DFD poziom 2 }{7}
-\contentsline {subsection}{\numberline {7.2}DFD poziom 2}{7}
-\contentsline {subsection}{\numberline {7.3}DFD poziom 2}{8}
-\contentsline {subsection}{\numberline {7.4}DFD poziom 2}{8}
-\contentsline {subsection}{\numberline {7.5}DFD poziom 2}{9}
-\contentsline {subsection}{\numberline {7.6}DFD poziom 2}{9}
-\contentsline {subsection}{\numberline {7.7}DFD poziom 2}{10}
-\contentsline {subsection}{\numberline {7.8}DFD poziom 2}{10}
-\contentsline {subsection}{\numberline {7.9}DFD poziom 2}{11}
-\contentsline {subsection}{\numberline {7.10}DFD poziom 2}{11}
+\contentsline {section}{\numberline {6}DFD poziom 1 dekompozycje}{5}
+\contentsline {subsection}{\numberline {6.1}DFD 1 Os\IeC {\l }uga zlece\IeC {\'n}}{5}
+\contentsline {subsection}{\numberline {6.2}DFD 2 Lokalizowanie}{5}
+\contentsline {subsection}{\numberline {6.3}DFD 3 Wyznaczanie przebytej trasy}{6}
+\contentsline {subsection}{\numberline {6.4}DFD 4 Obs\IeC {\l }uga zmiany po\IeC {\l }o\IeC {\.z}enia}{6}
+\contentsline {section}{\numberline {7}DFD poziom 2 dekompozycje}{7}
+\contentsline {subsection}{\numberline {7.1}DFD 1.1 Zlecenie wyznaczenia przebytej trasy }{7}
+\contentsline {subsection}{\numberline {7.2}DFD 1.2 Zlecenie rozpocz\IeC {\k e}cia lokalizacji urz\IeC {\k a}dzenia}{7}
+\contentsline {subsection}{\numberline {7.3}DFD 2.1 Sprawdzenie dost\IeC {\k e}pnego sposobu lokalizaci}{8}
+\contentsline {subsection}{\numberline {7.4}DFD 2.2 Lokalizacja za pomoc\IeC {\k a} WiFi}{8}
+\contentsline {subsection}{\numberline {7.5}DFD 2.3 Lokalizacja za pomoc\IeC {\k a} maszt\IeC {\'o}w telefonii kom\IeC {\'o}rkowej}{9}
+\contentsline {subsection}{\numberline {7.6}DFD 3.1 Obs\IeC {\l }uga cyklicznych zmian po\IeC {\l }o\IeC {\.z}enia}{9}
+\contentsline {subsection}{\numberline {7.7}DFD 3.2 Wyliczanie odcinka przebytej trasy}{10}
+\contentsline {subsection}{\numberline {7.8}DFD 3.3 Wyznaczanie ca\IeC {\l }ej przebytej trasy}{10}
+\contentsline {subsection}{\numberline {7.9}DFD 4.1 Obliczanie zmiany po\IeC {\l }o\IeC {\.z}enia}{11}
+\contentsline {subsection}{\numberline {7.10}DFD 4.2 Obs\IeC {\l }uga cyklicznych \IeC {\.z}\IeC {\k a}da\IeC {\'n}}{11}
 \contentsline {section}{\numberline {8}ERD - diagram}{12}
 \contentsline {section}{\numberline {9}ERD - opis}{13}
 \contentsline {subsection}{\numberline {9.1}PunktyDost\IeC {\k e}puWiFi}{13}
@@ -34,7 +34,7 @@
 \contentsline {subsection}{\numberline {9.11}Zmiana}{14}
 \contentsline {section}{\numberline {10}STD}{15}
 \contentsline {subsection}{\numberline {10.1}STD poziom 0}{15}
-\contentsline {subsection}{\numberline {10.2}STD poziom 1}{16}
-\contentsline {subsection}{\numberline {10.3}STD poziom 1}{17}
-\contentsline {subsection}{\numberline {10.4}STD poziom 1}{18}
-\contentsline {subsection}{\numberline {10.5}STD poziom 2}{19}
+\contentsline {subsection}{\numberline {10.2}STD poziom 1 - Lokalizacja gotowa}{16}
+\contentsline {subsection}{\numberline {10.3}STD poziom 1 - Trasa gotowa}{17}
+\contentsline {subsection}{\numberline {10.4}STD poziom 1 - Wy\IeC {\'s}wietlono na mapie}{18}
+\contentsline {subsection}{\numberline {10.5}STD poziom 2 - Odcinki utworzone}{19}
