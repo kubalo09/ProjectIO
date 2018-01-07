@@ -9,6 +9,7 @@
 \usepackage{etoolbox}
 \usepackage{blindtext}
 \usepackage{geometry}
+\usepackage{enumitem}
 \geometry{legalpaper, margin=1in}
 \usepackage[cleardoublepage=plain]{scrextend}
 \graphicspath{ {images/C:\Users\Kuba-PC\Desktop\ProjektIO} }
@@ -17,6 +18,7 @@
 \rhead{2017/2018}
 \lhead{Projekt z Inżynierii Oprogramowania}
 \rfoot{Strona \thepage}
+
 \begin{document}
 	
 	\begin{titlepage} 
@@ -71,7 +73,7 @@
 		%------------------------------------------------
 		
 		\vfill\vfill
-		\includegraphics[scale=0.5]{logo.jpg}
+		\includegraphics[scale=1.0]{logo.jpg}
 		
 		%------------------------------------------------
 		%	Data
@@ -295,4 +297,206 @@
 	\begin{center}
 		\includegraphics[scale=0.75]{STD4.pdf}
 	\end{center}
+	\newpage
+	\section{Specyfikacja procesów (PSPEC).}
+	\begin{enumerate}
+		\item Obsługa zleceń.
+		\begin{enumerate}[label*=\arabic*.]
+			\item Zlecenie wyznaczenia przebytej trasy.
+			\begin{enumerate}[label*=\arabic*.]
+				\item Wstępna konfiguracja. \newline
+				\textbf{Dane wejściowe}: Typ zlecenia od użytkownika, dokładność lokalizacji z danych aplikacji	\newline
+				\textbf{Warunek wejściowy}: Typ zlecenia = Zlecenie wyznaczenia trasy		\newline   	
+				\textbf{Opis działania}: Przygotowanie konfiguracji do tworzenia trasy. Zapytanie o punkt startowy do bazy oraz wysłanie żądania o przygotowanie zlecenia wyzanaczenia trasy o zadanej dokładności.	\newline
+				\textbf{Dane wyjściowe}: Dane na temat konfiguracji.	\newline
+				\textbf{Warunek wyjściowy}: Brak
+				\item Ustawienia punktu startowego. \newline
+				\textbf{Dane wejściowe}: Dane na temat punktu startowego	\newline
+				\textbf{Warunek wejściowy}: Brak		\newline   	
+				\textbf{Opis działania}: Sprawdzenie czy istnieje już wyznaczony punkt startowy i przekazanie informacji o nim do konfiguracji.	\newline
+				\textbf{Dane wyjściowe}: Informacje na temat punktu startowego.	\newline
+				\textbf{Warunek wyjściowy}: Brak
+				\item Przygotowanie zlecenia wyznaczenia trasy. \newline
+				\textbf{Dane wejściowe}: Konfiguracja.	\newline
+				\textbf{Warunek wejściowy}: Brak.		\newline   	
+				\textbf{Opis działania}: Stworzenie nowego zlecenia w bazie zleceń oraz wysłanie żądania o rozpoczęcie wyzanaczania trasy.	\newline
+				\textbf{Dane wyjściowe}: Dane o zleceniu przesyłane do bazy zleceń.	\newline
+				\textbf{Warunek wyjściowy}: Brak
+			\end{enumerate}
+			\item Zlecenie rozpoczęcia lokalizacji urządzenia.
+			\begin{enumerate}[label*=\arabic*.]
+				\item Wstępna konfiguracja. \newline
+				\textbf{Dane wejściowe}: Typ zlecenia od użytkownika, dokładność lokalizacji z danych aplikacji	\newline
+				\textbf{Warunek wejściowy}: Typ zlecenia = Zlecenie lokalizacji		\newline   	
+				\textbf{Opis działania}: Przygotowanie konfiguracji do lokalizacji urządzenia o zadanej dokładności.	\newline
+				\textbf{Dane wyjściowe}: Konfiguracja.	\newline
+				\textbf{Warunek wyjściowy}: Brak.
+				\item Przygotowanie zlecenia wyznaczenia lokalizacji. \newline
+				\textbf{Dane wejściowe}: Konfiguracja.	\newline
+				\textbf{Warunek wejściowy}: Brak		\newline   	
+				\textbf{Opis działania}: Tworzenie nowego zlecenia o lokalizcji i umieszczenie go w bazie zleceń oraz wysłanie żądania o rozpoczęcie lokalizowania.	\newline
+				\textbf{Dane wyjściowe}: Dane o zleceniu przesyłane do bazy zleceń.	\newline
+				\textbf{Warunek wyjściowy}: Brak
+			\end{enumerate}
+		\end{enumerate}
+		\item Lokalizowanie.
+		\begin{enumerate}[label*=\arabic*.]
+			\item Sprawdzanie dostępnego sposobu lokalizacji.
+			\begin{enumerate}[label*=\arabic*.]
+				\item Sprawdzanie dostępności punktów WiFi. \newline
+				\textbf{Dane wejściowe}: Typ zlecenia	\newline
+				\textbf{Warunek wejściowy}: Typ zlecenia = Zlecenie lokalizacji		\newline   	
+				\textbf{Opis działania}: Szukanie dostępnych punktów WiFi, sprawdzanie mocy ich sygnału. 	\newline
+				\textbf{Dane wyjściowe}: Dane na temat dostępności.	\newline
+				\textbf{Warunek wyjściowy}: Brak
+				\item Sprawdzanie dostępności masztów telefonii komórkowej. \newline
+				\textbf{Dane wejściowe}: 	\newline
+				\textbf{Warunek wejściowy}: Brak		\newline   	
+				\textbf{Opis działania}: Szukanie dostępnych masztów telefonii komórkowej, porównywanie ich syganału.	\newline
+				\textbf{Dane wyjściowe}: Dane na temat dostępności.	\newline
+				\textbf{Warunek wyjściowy}: Brak
+				\item Wybranie dostępnego sposobu. \newline
+				\textbf{Dane wejściowe}: Dane na temat dostępności punktów Wifi i masztów telefonii komórkowej	\newline
+				\textbf{Warunek wejściowy}: Brak		\newline   	
+				\textbf{Opis działania}: Wybranie najlepszego dostępnego sposobu lokalizacji.	\newline
+				\textbf{Dane wyjściowe}: Dane na temat lepszego sposobu.	\newline
+				\textbf{Warunek wyjściowy}: Brak
+			\end{enumerate}
+			\item Lokalizacja za pomocą WiFi.
+			\begin{enumerate}[label*=\arabic*.]
+				\item Stworzenie mapy punktów WiFi. \newline
+				\textbf{Dane wejściowe}: Dane o punktach WiFi z bazy danych.	\newline
+				\textbf{Warunek wejściowy}: Brak	\newline   	
+				\textbf{Opis działania}: Tworzenie mapy punktów WiFi na podstawie informacji o ich położeniu z bazy danych.	\newline
+				\textbf{Dane wyjściowe}: Mapa punktów WiFi.	\newline
+				\textbf{Warunek wyjściowy}: Brak
+				\item Wyliczanie położenia. \newline
+				\textbf{Dane wejściowe}: Mapa punktów WiFi, Dane z WiFi	\newline
+				\textbf{Warunek wejściowy}: Brak		\newline   	
+				\textbf{Opis działania}: Na podstawie otrzymanej mapy punktów WiFi oraz danych pobieranych z tych punktów wyznaczana jest lokalizacja o wyliczonym przybliżeniu.	\newline
+				\textbf{Dane wyjściowe}: Lokalizacja	\newline
+				\textbf{Warunek wyjściowy}: Brak
+			\end{enumerate}
+			\item Lokalizacja za pomocą masztów telefonii komórkowej.
+			\begin{enumerate}[label*=\arabic*.]
+				\item Wybranie masztów o najlepszej mocy sygnału. \newline
+				\textbf{Dane wejściowe}: Dostępne maszty	\newline
+				\textbf{Warunek wejściowy}:  Brak		\newline   	
+				\textbf{Opis działania}: Porównywanie dostępnych masztów i wybranie tych o najsilniejszym sygnale oraz stworzenie z nich mapy.	\newline
+				\textbf{Dane wyjściowe}: Mapa masztów telefonii komórkowej.  	\newline
+				\textbf{Warunek wyjściowy}:Brak
+				\item Wyliczanie położenia. \newline
+				\textbf{Dane wejściowe}: Mapa masztów telefonii komórkowej , Dane z masztów	\newline
+				\textbf{Warunek wejściowy}: Brak		\newline   	
+				\textbf{Opis działania}: Na podstawie otrzymanej mapy oraz danych pobieranych z masztów telefonii komórkowej wyznaczana jest lokalizacja o wyliczonym przybliżeniu.	\newline
+				\textbf{Dane wyjściowe}: Lokalizacja	\newline
+				\textbf{Warunek wyjściowy}: Brak
+			\end{enumerate}
+		\end{enumerate}
+		\item Wyznacznie przebytej trasy.
+		\begin{enumerate}[label*=\arabic*.]
+			\item Obsługa cyklicznych zmian położenia.
+			\begin{enumerate}[label*=\arabic*.]
+		   	\item Sterowanie zmianami. \newline
+				\textbf{Dane wejściowe}:	\newline
+				\textbf{Warunek wejściowy}: 		\newline   	
+				\textbf{Opis działania}:	\newline
+				\textbf{Dane wyjściowe}:	\newline
+				\textbf{Warunek wyjściowy}:
+				\item Konfiguracja. \newline
+				\textbf{Dane wejściowe}:	\newline
+				\textbf{Warunek wejściowy}: 		\newline   	
+				\textbf{Opis działania}:	\newline
+				\textbf{Dane wyjściowe}:	\newline
+				\textbf{Warunek wyjściowy}:
+				\item Synchronizacja według zegara. \newline
+				\textbf{Dane wejściowe}:	\newline
+				\textbf{Warunek wejściowy}: 		\newline   	
+				\textbf{Opis działania}:	\newline
+				\textbf{Dane wyjściowe}:	\newline
+				\textbf{Warunek wyjściowy}:
+			\end{enumerate}
+			\item Wyliczanie poszczególnej przebytej trasy.
+			\begin{enumerate}[label*=\arabic*.]
+				\item Ustalenia położenia według urządzenia lokalizującego. \newline
+				\textbf{Dane wejściowe}:	\newline
+				\textbf{Warunek wejściowy}: 		\newline   	
+				\textbf{Opis działania}:	\newline
+				\textbf{Dane wyjściowe}:	\newline
+				\textbf{Warunek wyjściowy}:
+				\item Ustalenie położenia według urządzeń pomiarowych. \newline
+				\textbf{Dane wejściowe}:	\newline
+				\textbf{Warunek wejściowy}: 		\newline   	
+				\textbf{Opis działania}:	\newline
+				\textbf{Dane wyjściowe}:	\newline
+				\textbf{Warunek wyjściowy}:
+				\item Wyliczenie błędu pomiarowego. \newline
+				\textbf{Dane wejściowe}:	\newline
+				\textbf{Warunek wejściowy}: 		\newline   	
+				\textbf{Opis działania}:	\newline
+				\textbf{Dane wyjściowe}:	\newline
+				\textbf{Warunek wyjściowy}:
+				\item Wyznaczenie trasy. \newline
+				\textbf{Dane wejściowe}:	\newline
+				\textbf{Warunek wejściowy}: 		\newline   	
+				\textbf{Opis działania}:	\newline
+				\textbf{Dane wyjściowe}:	\newline
+				\textbf{Warunek wyjściowy}:
+			\end{enumerate}
+			\item Wyznaczanie całej przebytej trasy.
+			\begin{enumerate}[label*=\arabic*.]
+				\item Informacje o wszystkich odcinkach trasy. \newline
+				\textbf{Dane wejściowe}:	\newline
+				\textbf{Warunek wejściowy}: 		\newline   	
+				\textbf{Opis działania}:	\newline
+				\textbf{Dane wyjściowe}:	\newline
+				\textbf{Warunek wyjściowy}:
+				\item Złączenie odcinków trasy. \newline
+				\textbf{Dane wejściowe}:	\newline
+				\textbf{Warunek wejściowy}: 		\newline   	
+				\textbf{Opis działania}:	\newline
+				\textbf{Dane wyjściowe}:	\newline
+				\textbf{Warunek wyjściowy}:
+				\item Wyzanczenie finalnej trasy. \newline
+				\textbf{Dane wejściowe}:	\newline
+				\textbf{Warunek wejściowy}: 		\newline   	
+				\textbf{Opis działania}:	\newline
+				\textbf{Dane wyjściowe}:	\newline
+				\textbf{Warunek wyjściowy}:
+			\end{enumerate}
+		\end{enumerate}
+		\item Obsługa zmiany położenia.
+		\begin{enumerate}[label*=\arabic*.]
+			\item Obliczanie zmiany położenia.
+			\begin{enumerate}[label*=\arabic*.]
+				\item Pobranie bazowego położenia oraz danych z urządzeń. \newline
+				\textbf{Dane wejściowe}: Bazowe położenie pobrane z bazy, zbiór danych z urządzeń pomiarowych	\newline
+				\textbf{Warunek wejściowy}: Brak		\newline   	
+				\textbf{Opis działania}: Pobranie bazowego położenia z bazy oraz żądanie o cykliczne dane z urządzeń pomiaowych. Stworzenie na ich podstawie danych do obliczenia zmiany położenia.	\newline
+				\textbf{Dane wyjściowe}: Dane potrzebne do obliczenia zmiany położenia.	\newline
+				\textbf{Warunek wyjściowy}: Brak
+				\item Obliczanie położenia na podstawie bazowego i zmienionego. \newline
+				\textbf{Dane wejściowe}:Dane potrzebne do obliczenia zmiany położenia.	\newline
+				\textbf{Warunek wejściowy}: Brak		\newline   	
+				\textbf{Opis działania}: Obliczenie położenia na podstawie otrzymanych danych. Bazowe położenie + zmiana położenie.	\newline
+				\textbf{Dane wyjściowe}: Nowe położenie.	\newline
+				\textbf{Warunek wyjściowy}: Brak
+			\end{enumerate}
+			\item Obsługa cyklicznych żądań.
+			\begin{enumerate}[label*=\arabic*.]
+				\item Synchronizacja według zegara. \newline
+				\textbf{Dane wejściowe}: Dane na temat czasu od zegara.	\newline
+				\textbf{Warunek wejściowy}:  Brak		\newline   	
+				\textbf{Opis działania}: Generowanie sygnału dla sterowania o zadanaej częstotliwości.	\newline
+				\textbf{Dane wyjściowe}: Cykliczne cygnały.	\newline
+				\textbf{Warunek wyjściowy}: Brak
+				\item Sterowanie żądaniami. \newline
+				\textbf{Dane wejściowe}: Cykliczne sygnały.	\newline
+				\textbf{Warunek wejściowy}: Brak.		\newline   	
+				\textbf{Opis działania}: Po otrzymaniu nowego sygnału wysyłanie zapytań do urządzeń pomiarowych o dane.	\newline
+				\textbf{Dane wyjściowe}: Dane z urządzeń pomiarowych.	\newline
+				\textbf{Warunek wyjściowy}: Brak
+			\end{enumerate}
+		\end{enumerate}
+	\end{enumerate}
 \end{document}
