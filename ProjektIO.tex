@@ -398,30 +398,30 @@
 			\item Obsługa cyklicznych zmian położenia.
 			\begin{enumerate}[label*=\arabic*.]
 		   	\item Sterowanie zmianami. \newline
-				\textbf{Dane wejściowe}:	\newline
-				\textbf{Warunek wejściowy}: 		\newline   	
+				\textbf{Dane wejściowe}: Konfiguracja,sygnał dla sterowania	\newline
+				\textbf{Warunek wejściowy}: Brak 		\newline   	
 				\textbf{Opis działania}:	\newline
 				\textbf{Dane wyjściowe}:	\newline
 				\textbf{Warunek wyjściowy}:
-				\item Konfiguracja. \newline
-				\textbf{Dane wejściowe}:	\newline
+			\item Konfiguracja. \newline
+				\textbf{Dane wejściowe}: Dane dotyczące zlecenia	\newline
 				\textbf{Warunek wejściowy}: 		\newline   	
-				\textbf{Opis działania}:	\newline
-				\textbf{Dane wyjściowe}:	\newline
-				\textbf{Warunek wyjściowy}:
-				\item Synchronizacja według zegara. \newline
-				\textbf{Dane wejściowe}:	\newline
-				\textbf{Warunek wejściowy}: 		\newline   	
-				\textbf{Opis działania}:	\newline
-				\textbf{Dane wyjściowe}:	\newline
-				\textbf{Warunek wyjściowy}:
+				\textbf{Opis działania}: Pobieranie danych dotyczących zlecenia i na ich podstawie tworzenie konfiguracji do danego zlecenia.	\newline
+				\textbf{Dane wyjściowe}: Konfiguracja.	\newline
+				\textbf{Warunek wyjściowy}: Brak
+			\item Synchronizacja według zegara. \newline
+				\textbf{Dane wejściowe}: Dane dotyczące czasu od zegara, konfiguracja	\newline
+				\textbf{Warunek wejściowy}: Brak		\newline   	
+				\textbf{Opis działania}: Pobiera konfigurację, która ustala interwały czasowe dla wysyłanego sygnału.  	\newline
+				\textbf{Dane wyjściowe}: Sygnał sterujący.	\newline
+				\textbf{Warunek wyjściowy}: Brak.
 			\end{enumerate}
 			\item Wyliczanie poszczególnej przebytej trasy.
 			\begin{enumerate}[label*=\arabic*.]
 				\item Ustalenia położenia według urządzenia lokalizującego. \newline
-				\textbf{Dane wejściowe}:	\newline
-				\textbf{Warunek wejściowy}: 		\newline   	
-				\textbf{Opis działania}:	\newline
+				\textbf{Dane wejściowe}: Położenie	\newline
+				\textbf{Warunek wejściowy}: Brak		\newline   	
+				\textbf{Opis działania}: 	\newline
 				\textbf{Dane wyjściowe}:	\newline
 				\textbf{Warunek wyjściowy}:
 				\item Ustalenie położenia według urządzeń pomiarowych. \newline
@@ -431,34 +431,34 @@
 				\textbf{Dane wyjściowe}:	\newline
 				\textbf{Warunek wyjściowy}:
 				\item Wyliczenie błędu pomiarowego. \newline
-				\textbf{Dane wejściowe}:	\newline
-				\textbf{Warunek wejściowy}: 		\newline   	
-				\textbf{Opis działania}:	\newline
-				\textbf{Dane wyjściowe}:	\newline
-				\textbf{Warunek wyjściowy}:
+				\textbf{Dane wejściowe}: Położenie, dokładność	\newline
+				\textbf{Warunek wejściowy}: Brak		\newline   	
+				\textbf{Opis działania}: Obliczenie błędu pomiarowego na podstawie aktualnego położenia i dokładności z jaką został wyznaczony.	\newline
+				\textbf{Dane wyjściowe}: Błąd pomiarowy.	\newline
+				\textbf{Warunek wyjściowy}: Brak.
 				\item Wyznaczenie trasy. \newline
-				\textbf{Dane wejściowe}:	\newline
-				\textbf{Warunek wejściowy}: 		\newline   	
-				\textbf{Opis działania}:	\newline
-				\textbf{Dane wyjściowe}:	\newline
-				\textbf{Warunek wyjściowy}:
+				\textbf{Dane wejściowe}: Aktualne położenie, Poprzednie położenie	\newline
+				\textbf{Warunek wejściowy}: Aktualne położenie != Poprzednie położenie		\newline   	
+				\textbf{Opis działania}: Tworzenie odcinka trasy na podstawie aktualnego i poprzedniego położenie oraz dodanie go bazy wyznaczonych pomniejszych odcinków.	\newline
+				\textbf{Dane wyjściowe}: Odcinek trasy.	\newline
+				\textbf{Warunek wyjściowy}: Brak.
 			\end{enumerate}
 			\item Wyznaczanie całej przebytej trasy.
 			\begin{enumerate}[label*=\arabic*.]
 				\item Informacje o wszystkich odcinkach trasy. \newline
-				\textbf{Dane wejściowe}:	\newline
-				\textbf{Warunek wejściowy}: 		\newline   	
-				\textbf{Opis działania}:	\newline
-				\textbf{Dane wyjściowe}:	\newline
-				\textbf{Warunek wyjściowy}:
+				\textbf{Dane wejściowe}: Lista wszystkich odcinków trasy.	\newline
+				\textbf{Warunek wejściowy}: Brak.		\newline   	
+				\textbf{Opis działania}: Pobieranie po kolei odcinków trasy z bazy i przekazywanie ich do złączenia.	\newline
+				\textbf{Dane wyjściowe}: Odcinek trasy.	\newline
+				\textbf{Warunek wyjściowy}: Brak.
 				\item Złączenie odcinków trasy. \newline
-				\textbf{Dane wejściowe}:	\newline
-				\textbf{Warunek wejściowy}: 		\newline   	
-				\textbf{Opis działania}:	\newline
-				\textbf{Dane wyjściowe}:	\newline
-				\textbf{Warunek wyjściowy}:
+				\textbf{Dane wejściowe}: Odcinek trasy.	\newline
+				\textbf{Warunek wejściowy}: Brak.		\newline   	
+				\textbf{Opis działania}: Łączenie po kolei otrzymywanych odcinków w jedną przebytą trasę.	\newline
+				\textbf{Dane wyjściowe}: Trasa.	\newline
+				\textbf{Warunek wyjściowy}: Brak
 				\item Wyzanczenie finalnej trasy. \newline
-				\textbf{Dane wejściowe}:	\newline
+				\textbf{Dane wejściowe}: Trasa.	\newline
 				\textbf{Warunek wejściowy}: 		\newline   	
 				\textbf{Opis działania}:	\newline
 				\textbf{Dane wyjściowe}:	\newline
