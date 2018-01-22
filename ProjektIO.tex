@@ -10,6 +10,7 @@
 \usepackage{blindtext}
 \usepackage{geometry}
 \usepackage{enumitem}
+\usepackage{pdfpages}
 \geometry{legalpaper, margin=1in}
 \usepackage[cleardoublepage=plain]{scrextend}
 \graphicspath{ {images/C:\Users\Kuba-PC\Desktop\ProjektIO} }
@@ -153,7 +154,7 @@
 	\newpage
 	\section{DFD poziom 0}
 	\begin{center}
-		\includegraphics[scale=0.8]{DFD0.pdf}
+		\includegraphics[scale=0.7]{DFD0.pdf}
 	\end{center}
 	\newpage
 	\section{DFD poziom 1 dekompozycje}
@@ -298,7 +299,7 @@
 		\includegraphics[scale=0.75]{STD4.pdf}
 	\end{center}
 	\newpage
-	\section{Specyfikacja procesów (PSPEC).}
+	\section{Specyfikacja procesów (PSPE).}
 	\begin{enumerate}
 		\item Obsługa zleceń.
 		\begin{enumerate}[label*=\arabic*.]
@@ -307,20 +308,21 @@
 				\item Wstępna konfiguracja. \newline
 				\textbf{Dane wejściowe}: Typ zlecenia od użytkownika, dokładność lokalizacji z danych aplikacji	\newline
 				\textbf{Warunek wejściowy}: Typ zlecenia = Zlecenie wyznaczenia trasy		\newline   	
-				\textbf{Opis działania}: Przygotowanie konfiguracji do tworzenia trasy. Zapytanie o punkt startowy do bazy oraz wysłanie żądania o przygotowanie zlecenia wyzanaczenia trasy o zadanej dokładności.	\newline
-				\textbf{Dane wyjściowe}: Dane na temat konfiguracji.	\newline
+				\textbf{Opis działania}:\newline Stworzenie nowego obiektu klasy konfiguracyjnej. \newline Przypisanie mu wartości otrzymanych na wejściu.	\newline
+				\textbf{Dane wyjściowe}: Obiekt klasy konfiguracji.	\newline
 				\textbf{Warunek wyjściowy}: Brak
 				\item Ustawienia punktu startowego. \newline
 				\textbf{Dane wejściowe}: Dane na temat punktu startowego	\newline
 				\textbf{Warunek wejściowy}: Brak		\newline   	
-				\textbf{Opis działania}: Sprawdzenie czy istnieje już wyznaczony punkt startowy i przekazanie informacji o nim do konfiguracji.	\newline
+				\textbf{Opis działania}:\newline Jeżeli istnieje punkt startowy to zwróć informację o nim, w przeciwnym wypadku zleć wyznaczenie punktu startowego. 	\newline
 				\textbf{Dane wyjściowe}: Informacje na temat punktu startowego.	\newline
 				\textbf{Warunek wyjściowy}: Brak
 				\item Przygotowanie zlecenia wyznaczenia trasy. \newline
-				\textbf{Dane wejściowe}: Konfiguracja.	\newline
+				\textbf{Dane wejściowe}: Obiekt klasy konfiguracji.	\newline
 				\textbf{Warunek wejściowy}: Brak.		\newline   	
-				\textbf{Opis działania}: Stworzenie nowego zlecenia w bazie zleceń oraz wysłanie żądania o rozpoczęcie wyzanaczania trasy.	\newline
-				\textbf{Dane wyjściowe}: Dane o zleceniu przesyłane do bazy zleceń.	\newline
+				\textbf{Opis działania}:\newline Stowrzenie nowego obiektu klasy zleceń.
+				\newline Przypisanie danych otrzymanych w obiekcie klasy konfiguracji. \newline Dodanie obiektu do bazy zleceń.	\newline
+				\textbf{Dane wyjściowe}: Obiekt klasy zleceń.	\newline
 				\textbf{Warunek wyjściowy}: Brak
 			\end{enumerate}
 			\item Zlecenie rozpoczęcia lokalizacji urządzenia.
@@ -328,14 +330,17 @@
 				\item Wstępna konfiguracja. \newline
 				\textbf{Dane wejściowe}: Typ zlecenia od użytkownika, dokładność lokalizacji z danych aplikacji	\newline
 				\textbf{Warunek wejściowy}: Typ zlecenia = Zlecenie lokalizacji		\newline   	
-				\textbf{Opis działania}: Przygotowanie konfiguracji do lokalizacji urządzenia o zadanej dokładności.	\newline
-				\textbf{Dane wyjściowe}: Konfiguracja.	\newline
+				\textbf{Opis działania}:\newline  Stworzenie nowego obiektu klasy konfiguracyjnej.
+				\newline Przypisanie mu wartości otrzymanych na wejściu.
+				\newline Ustawienie typu zlecenia.	\newline
+				\textbf{Dane wyjściowe}:Obiekt klasy konfiguracji.	\newline
 				\textbf{Warunek wyjściowy}: Brak.
 				\item Przygotowanie zlecenia wyznaczenia lokalizacji. \newline
 				\textbf{Dane wejściowe}: Konfiguracja.	\newline
 				\textbf{Warunek wejściowy}: Brak		\newline   	
-				\textbf{Opis działania}: Tworzenie nowego zlecenia o lokalizcji i umieszczenie go w bazie zleceń oraz wysłanie żądania o rozpoczęcie lokalizowania.	\newline
-				\textbf{Dane wyjściowe}: Dane o zleceniu przesyłane do bazy zleceń.	\newline
+				\textbf{Opis działania}:\newline  Stowrzenie nowego obiektu klasy zleceń.
+				\newline Przypisanie danych otrzymanych w obiekcie klasy konfiguracji.\newline
+				\textbf{Dane wyjściowe}: Obiekt klasy zleceń.	\newline
 				\textbf{Warunek wyjściowy}: Brak
 			\end{enumerate}
 		\end{enumerate}
@@ -346,50 +351,38 @@
 				\item Sprawdzanie dostępności punktów WiFi. \newline
 				\textbf{Dane wejściowe}: Typ zlecenia	\newline
 				\textbf{Warunek wejściowy}: Typ zlecenia = Zlecenie lokalizacji		\newline   	
-				\textbf{Opis działania}: Szukanie dostępnych punktów WiFi, sprawdzanie mocy ich sygnału. 	\newline
-				\textbf{Dane wyjściowe}: Dane na temat dostępności.	\newline
-				\textbf{Warunek wyjściowy}: Brak
-				\item Sprawdzanie dostępności masztów telefonii komórkowej. \newline
-				\textbf{Dane wejściowe}: 	\newline
-				\textbf{Warunek wejściowy}: Brak		\newline   	
-				\textbf{Opis działania}: Szukanie dostępnych masztów telefonii komórkowej, porównywanie ich syganału.	\newline
-				\textbf{Dane wyjściowe}: Dane na temat dostępności.	\newline
-				\textbf{Warunek wyjściowy}: Brak
-				\item Wybranie dostępnego sposobu. \newline
-				\textbf{Dane wejściowe}: Dane na temat dostępności punktów Wifi i masztów telefonii komórkowej	\newline
-				\textbf{Warunek wejściowy}: Brak		\newline   	
-				\textbf{Opis działania}: Wybranie najlepszego dostępnego sposobu lokalizacji.	\newline
-				\textbf{Dane wyjściowe}: Dane na temat lepszego sposobu.	\newline
+				\textbf{Opis działania}: \newline Wysyłanie zapytania do punktu WiFi o zwrócenie mocy sygnału i adresu MAC.\newline Przypisanie adresów MAC do listy punktów o najsilniejszej mocy sygnału.	\newline
+				\textbf{Dane wyjściowe}: Lista adresów MAC.	\newline
 				\textbf{Warunek wyjściowy}: Brak
 			\end{enumerate}
 			\item Lokalizacja za pomocą WiFi.
 			\begin{enumerate}[label*=\arabic*.]
 				\item Stworzenie mapy punktów WiFi. \newline
-				\textbf{Dane wejściowe}: Dane o punktach WiFi z bazy danych.	\newline
+				\textbf{Dane wejściowe}: Lista adresów MAC punktów WiFi.	\newline
 				\textbf{Warunek wejściowy}: Brak	\newline   	
-				\textbf{Opis działania}: Tworzenie mapy punktów WiFi na podstawie informacji o ich położeniu z bazy danych.	\newline
+				\textbf{Opis działania}: \newline Pobranie danych z bazy dla każdego punktu. \newline Stworzenie mapy tych punktów.	\newline
 				\textbf{Dane wyjściowe}: Mapa punktów WiFi.	\newline
 				\textbf{Warunek wyjściowy}: Brak
 				\item Wyliczanie położenia. \newline
-				\textbf{Dane wejściowe}: Mapa punktów WiFi, Dane z WiFi	\newline
+				\textbf{Dane wejściowe}: Mapa punktów WiFi, Dane z punktów WiFi	\newline
 				\textbf{Warunek wejściowy}: Brak		\newline   	
-				\textbf{Opis działania}: Na podstawie otrzymanej mapy punktów WiFi oraz danych pobieranych z tych punktów wyznaczana jest lokalizacja o wyliczonym przybliżeniu.	\newline
-				\textbf{Dane wyjściowe}: Lokalizacja	\newline
+				\textbf{Opis działania}:\newline Wysyłanie zapytań do każdego z punktów o informacje o mocy sygnału. \newline Obliczanie odległości od danych punktów. \newline Obliczanie lokalizacji na podstawie odległości od punktów WiFi oraz informacji o ich położeniu. \newline Stworzenie nowego obiektu klasy lokalizacja i zainicjalizowanie go wyliczonymi wartościami. \newline Dodanie obiektu do bazy lokalizacje.	\newline
+				\textbf{Dane wyjściowe}: Obiekt klasy lokalizacja.	\newline
 				\textbf{Warunek wyjściowy}: Brak
 			\end{enumerate}
 			\item Lokalizacja za pomocą masztów telefonii komórkowej.
 			\begin{enumerate}[label*=\arabic*.]
 				\item Wybranie masztów o najlepszej mocy sygnału. \newline
-				\textbf{Dane wejściowe}: Dostępne maszty	\newline
+				\textbf{Dane wejściowe}: Lista anten.	\newline
 				\textbf{Warunek wejściowy}:  Brak		\newline   	
-				\textbf{Opis działania}: Porównywanie dostępnych masztów i wybranie tych o najsilniejszym sygnale oraz stworzenie z nich mapy.	\newline
-				\textbf{Dane wyjściowe}: Mapa masztów telefonii komórkowej.  	\newline
+				\textbf{Opis działania}: \newline Wybranie najepszych anten z dostępnych. \newline Stworzenie z nich mapy.	\newline
+				\textbf{Dane wyjściowe}: Mapa identyfikatorów masztów.  	\newline
 				\textbf{Warunek wyjściowy}:Brak
 				\item Wyliczanie położenia. \newline
 				\textbf{Dane wejściowe}: Mapa masztów telefonii komórkowej , Dane z masztów	\newline
 				\textbf{Warunek wejściowy}: Brak		\newline   	
-				\textbf{Opis działania}: Na podstawie otrzymanej mapy oraz danych pobieranych z masztów telefonii komórkowej wyznaczana jest lokalizacja o wyliczonym przybliżeniu.	\newline
-				\textbf{Dane wyjściowe}: Lokalizacja	\newline
+				\textbf{Opis działania}: \newline Pobieranie informacji o mocy sygnału z masztów. \newline Wyliczanie odległości na podstawie mocy sygnału i mapy anten. \newline Wyliczanie lokalizacji na podstawie odległości i położenia anten. \newline Stworzenie nowego obiektu klasy lokalizacji i zainicjalizowanie go wyliczonymi wartościami. \newline Dodanie obiektu do bazy lokalizacje.	\newline
+				\textbf{Dane wyjściowe}: Obiekt klasy lokalizacja.	\newline
 				\textbf{Warunek wyjściowy}: Brak
 			\end{enumerate}
 		\end{enumerate}
@@ -398,71 +391,72 @@
 			\item Obsługa cyklicznych zmian położenia.
 			\begin{enumerate}[label*=\arabic*.]
 		   	\item Sterowanie zmianami. \newline
-				\textbf{Dane wejściowe}: Konfiguracja,sygnał dla sterowania	\newline
+				\textbf{Dane wejściowe}: Obiekt klasy konfiguracja, sygnał	\newline
 				\textbf{Warunek wejściowy}: Brak 		\newline   	
-				\textbf{Opis działania}:	\newline
+				\textbf{Opis działania}:	\newline Tworzy obiekt klasy ustawieniaSynchronizacjiZegara na podstawie konfiguracji i przesyła ją do Synchronizacji według zegara.\newline Czeka an sygnał ze strony Synchronizacji według zegara. \newline
+				Gdy go dostanie tworzy obiekt klasy zlecenieWyznaczeniaTrasy i przesyła je do obsługi zmiany położenia/ \newline
 				\textbf{Dane wyjściowe}:	\newline
-				\textbf{Warunek wyjściowy}:
+				\textbf{Warunek wyjściowy}: obiekt klasy ustawieniaSynchronizacjiZegara
 			\item Konfiguracja. \newline
-				\textbf{Dane wejściowe}: Dane dotyczące zlecenia	\newline
-				\textbf{Warunek wejściowy}: 		\newline   	
-				\textbf{Opis działania}: Pobieranie danych dotyczących zlecenia i na ich podstawie tworzenie konfiguracji do danego zlecenia.	\newline
-				\textbf{Dane wyjściowe}: Konfiguracja.	\newline
+				\textbf{Dane wejściowe}: Obiekt klasy zleceń, dokładność.	\newline
+				\textbf{Warunek wejściowy}: Brak		\newline   	
+				\textbf{Opis działania}: \newline Stworzenie nowego obiektu klasy koniguracjaWyznaczaniaTrasy na podstawie informacji z obiektu klasy zleceń i dokładnosći.	\newline
+				\textbf{Dane wyjściowe}: Obiekt klasy koniguracjaWyznaczaniaTrasy.	\newline
 				\textbf{Warunek wyjściowy}: Brak
 			\item Synchronizacja według zegara. \newline
-				\textbf{Dane wejściowe}: Dane dotyczące czasu od zegara, konfiguracja	\newline
+				\textbf{Dane wejściowe}: Dane dotyczące czasu od zegara, obiekt klasy ustawieniaSychronizacjiZegara	\newline
 				\textbf{Warunek wejściowy}: Brak		\newline   	
-				\textbf{Opis działania}: Pobiera konfigurację, która ustala interwały czasowe dla wysyłanego sygnału.  	\newline
-				\textbf{Dane wyjściowe}: Sygnał sterujący.	\newline
+				\textbf{Opis działania}: \newline Ustalenie interwałów czasowych sygnału na podstawie informacji z konfiguracji.  \newline Stworzenie nowego obiektu klasy sygnałSterujący i zaincjalizowanie go wyliczonymi wartościami.	\newline
+				\textbf{Dane wyjściowe}: Obiekt klasy sygnałSterujący.	\newline
 				\textbf{Warunek wyjściowy}: Brak.
 			\end{enumerate}
 			\item Wyliczanie poszczególnej przebytej trasy.
 			\begin{enumerate}[label*=\arabic*.]
 				\item Ustalenia położenia według urządzenia lokalizującego. \newline
-				\textbf{Dane wejściowe}: Położenie	\newline
+				\textbf{Dane wejściowe}: Obiekty klasy Lokalizacja, obiekt klasy ZlecenieWyznaczeniaTrasy	\newline
 				\textbf{Warunek wejściowy}: Brak		\newline   	
-				\textbf{Opis działania}: 	\newline
-				\textbf{Dane wyjściowe}:	\newline
-				\textbf{Warunek wyjściowy}:
+				\textbf{Opis działania}:\newline Wylicza zmiane położenia na podstawie otrzymanego aktualnego położenia i urzadzenia lokalizującego.	\newline
+				\textbf{Dane wyjściowe}: Obiekt klasy lokalizacja.	\newline
+				\textbf{Warunek wyjściowy}: Brak
 				\item Ustalenie położenia według urządzeń pomiarowych. \newline
-				\textbf{Dane wejściowe}:	\newline
-				\textbf{Warunek wejściowy}: 		\newline   	
-				\textbf{Opis działania}:	\newline
-				\textbf{Dane wyjściowe}:	\newline
-				\textbf{Warunek wyjściowy}:
-				\item Wyliczenie błędu pomiarowego. \newline
-				\textbf{Dane wejściowe}: Położenie, dokładność	\newline
+				\textbf{Dane wejściowe}: Obiekt klasy lokalizacja, obiekt klasy ZlecenieWyznaczeniaTrasy, dane z urządzeń	\newline
 				\textbf{Warunek wejściowy}: Brak		\newline   	
-				\textbf{Opis działania}: Obliczenie błędu pomiarowego na podstawie aktualnego położenia i dokładności z jaką został wyznaczony.	\newline
-				\textbf{Dane wyjściowe}: Błąd pomiarowy.	\newline
+				\textbf{Opis działania}:\newline Wylicza zmiane położenia na podstawie poprzedniego położenia i urządzeń pomiarowych, zgodnie z danymi nt.zmiany polozenia.	\newline
+				\textbf{Dane wyjściowe}: Obiekt klasy lokalizacja.	\newline
+				\textbf{Warunek wyjściowy}: Brak
+				\item Wyliczenie błędu pomiarowego. \newline
+				\textbf{Dane wejściowe}: Obiekt klasy lokalizacja, obiekt klasy konfiguracja	\newline
+				\textbf{Warunek wejściowy}: Brak		\newline   	
+				\textbf{Opis działania}:\newline Obliczenie błędu pomiarowego na podstawie aktualnego położenia i dokładności z jaką został wyznaczony. \newline Stworzenie nowego obiektu klasy bladPomiarowy i zainicjalizowanie go wyliczonymi wartościami.	\newline
+				\textbf{Dane wyjściowe}: Obiekt klasy bladPomiarowy.	\newline
 				\textbf{Warunek wyjściowy}: Brak.
 				\item Wyznaczenie trasy. \newline
-				\textbf{Dane wejściowe}: Aktualne położenie, Poprzednie położenie	\newline
+				\textbf{Dane wejściowe}: Dwa obiekty klasy lokalizacja.	\newline
 				\textbf{Warunek wejściowy}: Aktualne położenie != Poprzednie położenie		\newline   	
-				\textbf{Opis działania}: Tworzenie odcinka trasy na podstawie aktualnego i poprzedniego położenie oraz dodanie go bazy wyznaczonych pomniejszych odcinków.	\newline
-				\textbf{Dane wyjściowe}: Odcinek trasy.	\newline
+				\textbf{Opis działania}: \newline Obliczenie odcinka na podstawie dwóch położeń. \newline Stworzenie nowego obiektu klasy odcinekTrasy i zainicjalizowanie go wyliczonymi wartościami. \newline Dodanie go do bazy odcinków.	\newline
+				\textbf{Dane wyjściowe}: Obiekt klasy odcinekTrasy.	\newline
 				\textbf{Warunek wyjściowy}: Brak.
 			\end{enumerate}
 			\item Wyznaczanie całej przebytej trasy.
 			\begin{enumerate}[label*=\arabic*.]
 				\item Informacje o wszystkich odcinkach trasy. \newline
-				\textbf{Dane wejściowe}: Lista wszystkich odcinków trasy.	\newline
+				\textbf{Dane wejściowe}: Obiekt klasy odcinekTrasy.	\newline
 				\textbf{Warunek wejściowy}: Brak.		\newline   	
-				\textbf{Opis działania}: Pobieranie po kolei odcinków trasy z bazy i przekazywanie ich do złączenia.	\newline
-				\textbf{Dane wyjściowe}: Odcinek trasy.	\newline
+				\textbf{Opis działania}: \newline Pobieranie po kolei wszystkich obiektów klasy odcinekTrasy z bazy. \newline Tworzenie z nich listy odcinków posortowanych rosnącą pod względem czasu utworzenia.	\newline
+				\textbf{Dane wyjściowe}: Lista obiektów odcinekTrasy.	\newline
 				\textbf{Warunek wyjściowy}: Brak.
 				\item Złączenie odcinków trasy. \newline
-				\textbf{Dane wejściowe}: Odcinek trasy.	\newline
+				\textbf{Dane wejściowe}: Lista obiektów odcinekTrasy.	\newline
 				\textbf{Warunek wejściowy}: Brak.		\newline   	
-				\textbf{Opis działania}: Łączenie po kolei otrzymywanych odcinków w jedną przebytą trasę.	\newline
-				\textbf{Dane wyjściowe}: Trasa.	\newline
+				\textbf{Opis działania}: \newline Łącznie po koleji odcinków z listy w jedną trasę. \newline Stworzenie nowego obiektu klasy Trasa i zainicjalizowanie go wyliczonymi wartościami.	\newline
+				\textbf{Dane wyjściowe}: Obiekt klasy trasa.	\newline
 				\textbf{Warunek wyjściowy}: Brak
 				\item Wyzanczenie finalnej trasy. \newline
-				\textbf{Dane wejściowe}: Trasa.	\newline
-				\textbf{Warunek wejściowy}: 		\newline   	
-				\textbf{Opis działania}:	\newline
-				\textbf{Dane wyjściowe}:	\newline
-				\textbf{Warunek wyjściowy}:
+				\textbf{Dane wejściowe}: Obiekt klasy trasa.	\newline
+				\textbf{Warunek wejściowy}: Brak.	\newline   	
+				\textbf{Opis działania}: Nałożenie filtrów wygładzających trasę z dużych błędów.	\newline
+				\textbf{Dane wyjściowe}: Obiekt klasy trasa.	\newline
+				\textbf{Warunek wyjściowy}: Brak
 			\end{enumerate}
 		\end{enumerate}
 		\item Obsługa zmiany położenia.
@@ -470,33 +464,20 @@
 			\item Obliczanie zmiany położenia.
 			\begin{enumerate}[label*=\arabic*.]
 				\item Pobranie bazowego położenia oraz danych z urządzeń. \newline
-				\textbf{Dane wejściowe}: Bazowe położenie pobrane z bazy, zbiór danych z urządzeń pomiarowych	\newline
+				\textbf{Dane wejściowe}: Obiekt klasy lokalizacja, dane z urządzeń pomiarowych	\newline
 				\textbf{Warunek wejściowy}: Brak		\newline   	
-				\textbf{Opis działania}: Pobranie bazowego położenia z bazy oraz żądanie o cykliczne dane z urządzeń pomiaowych. Stworzenie na ich podstawie danych do obliczenia zmiany położenia.	\newline
-				\textbf{Dane wyjściowe}: Dane potrzebne do obliczenia zmiany położenia.	\newline
+				\textbf{Opis działania}: \newline Obliczenie zmiany lokalizacji na podstawie starej oraz danych z urządzeń pomiarowych. \newline Stworzenie obiektu klasy lokalizacja i zainicjalizowanie go wyliczonymi wartościami.	\newline
+				\textbf{Dane wyjściowe}: Tablica dwuelementowa z obiektami klasy lokalizacja.	\newline
 				\textbf{Warunek wyjściowy}: Brak
 				\item Obliczanie położenia na podstawie bazowego i zmienionego. \newline
-				\textbf{Dane wejściowe}:Dane potrzebne do obliczenia zmiany położenia.	\newline
+				\textbf{Dane wejściowe}:Tablica dwuelementowa z obiektami klasy lokalizacja.	\newline
 				\textbf{Warunek wejściowy}: Brak		\newline   	
-				\textbf{Opis działania}: Obliczenie położenia na podstawie otrzymanych danych. Bazowe położenie + zmiana położenie.	\newline
-				\textbf{Dane wyjściowe}: Nowe położenie.	\newline
-				\textbf{Warunek wyjściowy}: Brak
-			\end{enumerate}
-			\item Obsługa cyklicznych żądań.
-			\begin{enumerate}[label*=\arabic*.]
-				\item Synchronizacja według zegara. \newline
-				\textbf{Dane wejściowe}: Dane na temat czasu od zegara.	\newline
-				\textbf{Warunek wejściowy}:  Brak		\newline   	
-				\textbf{Opis działania}: Generowanie sygnału dla sterowania o zadanaej częstotliwości.	\newline
-				\textbf{Dane wyjściowe}: Cykliczne cygnały.	\newline
-				\textbf{Warunek wyjściowy}: Brak
-				\item Sterowanie żądaniami. \newline
-				\textbf{Dane wejściowe}: Cykliczne sygnały.	\newline
-				\textbf{Warunek wejściowy}: Brak.		\newline   	
-				\textbf{Opis działania}: Po otrzymaniu nowego sygnału wysyłanie zapytań do urządzeń pomiarowych o dane.	\newline
-				\textbf{Dane wyjściowe}: Dane z urządzeń pomiarowych.	\newline
+				\textbf{Opis działania}: .	\newline Wyznaczenie nowego położenia.\newline Stworzenie obiektu klasy lokalizacja oraz zainicalizowanie go wyznaczonymi wartościami. \newline
+				\textbf{Dane wyjściowe}: Obiekt klasy lokalizacja.	\newline
 				\textbf{Warunek wyjściowy}: Brak
 			\end{enumerate}
 		\end{enumerate}
 	\end{enumerate}
+	\newpage
+	\includepdf[pages={1-3}]{slownik.pdf}
 \end{document}
